@@ -13,5 +13,5 @@
 //= require jquery.min
 //= require jquery_ujs
 //= require bootstrap.min
-//= require application_jquery
+//= require application_coffee
 // = require_tree .
