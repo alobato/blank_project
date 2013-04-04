@@ -2,14 +2,41 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>BlankProject</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= content_for?(:title) ? yield(:title) : 'BlankProject' %></title>
   <meta name="description" content="Listinha Básica">
   <meta name="author" content="">
   <%= stylesheet_link_tag 'application' %>
   <%= csrf_meta_tags %>
+
+  <%= yield(:head) %>
 </head>
 <body>
+
+<!-- Navbar
+================================================== -->
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="brand" href="/">BlankProject</a>
+      <div class="nav-collapse collapse">
+        <ul class="nav">
+          <li class="active">
+            <a href="/">Home</a>
+          </li>
+          <li class="">
+            <a href="/contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
 
 <%= render 'shared/flash', object: flash %>
 
@@ -19,5 +46,7 @@
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <%= javascript_include_tag 'application' %>
+
+<%= yield(:bottom) %>
 </body>
 </html>

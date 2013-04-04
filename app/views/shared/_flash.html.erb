@@ -1,6 +1,8 @@
 <% object.each do |name, msg| %>
-  <% c = "alert #{name}" %>
-  <% c = "#{c} alert-error" if name.to_s == 'alert' %>
-  <% c = "#{c} alert-success" if name.to_s == 'notice' %>
-  <%= content_tag :div, msg, class: c %>
+  <% if msg.is_a?(String) %>
+    <div class="alert alert-<%= name == :notice ? 'success' : 'error' %>">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <%= msg %>
+    </div>
+  <% end %>
 <% end %>
