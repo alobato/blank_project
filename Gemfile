@@ -39,5 +39,5 @@ gem 'jquery-rails', '2.2.1'
 # gem 'debugger'
 
 gem 'strong_parameters', '0.2.0'
-gem 'simple_form', '2.1.0'
+
 gem 'kaminari', '0.14.1'

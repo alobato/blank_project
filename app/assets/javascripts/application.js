@@ -14,4 +14,3 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require application_coffee
-// = require_tree .
