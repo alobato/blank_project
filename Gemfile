@@ -43,3 +43,5 @@ gem 'strong_parameters', '0.2.0'
 gem 'kaminari', '0.14.1'
 
 gem 'capybara', '2.1.0', group: :test
+
+gem 'rubocop', '0.6.1', group: :development
